@@ -19,5 +19,4 @@ class PcaAnalysisPage(Page):
         # Exibir a variância explicada
         explained_variance = pca.explained_variance_ratio_
         st.write(strings["pca_variance_description"])
-        st.write(strings["pca_variance_eval"])
         st.text(strings["pca_variance_explained"].format(explained_variance))
