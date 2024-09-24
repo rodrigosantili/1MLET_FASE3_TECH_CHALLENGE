@@ -1,0 +1,126 @@
+<resources>
+    <!-- App -->
+    <string name="app_page_title">Previsão de Asteroides</string>
+    <string name="model_selection_prompt">Selecione o modelo para fazer a previsão:</string>
+    <string name="model_loaded_success">Modelo {0} carregado com sucesso.</string>
+    <string name="navigation_menu_title">Menu de Navegação</string>
+    <string name="page_prediction">Previsão</string>
+    <string name="page_model_evaluation">Avaliação do Modelo</string>
+    <string name="page_eda">Análise Exploratória EDA</string>
+    <string name="page_pca">Análise PCA</string>
+    <string name="page_cross_validation">Validação Cruzada</string>
+
+    <!-- Model Evaluation Page -->
+    <string name="model_evaluation_page_title">Avaliação do Modelo</string>
+    <string name="confusion_matrix_title">### Matriz de Confusão</string>
+    <string name="confusion_matrix_description">**Descrição:** Mostra a relação entre as previsões do modelo e os valores reais, organizando os dados em Verdadeiros Positivos (TP), Verdadeiros Negativos (TN), Falsos Positivos (FP) e Falsos Negativos (FN).</string>
+    <string name="confusion_matrix_eval">**Avaliação:** Idealmente, TP e TN devem ser altos e FP e FN baixos, indicando que o modelo acerta a maioria das previsões.</string>
+    <string name="roc_curve_title">### Curva ROC (Receiver Operating Characteristic)</string>
+    <string name="roc_curve_description">**Descrição:** Mostra a taxa de verdadeiros positivos (sensibilidade) contra a taxa de falsos positivos em vários limiares de decisão.</string>
+    <string name="roc_curve_eval">**Avaliação:** Quanto mais próxima a curva estiver do canto superior esquerdo, melhor. O AUC (Área sob a curva) próximo de 1 indica excelente desempenho.</string>
+    <string name="pr_curve_title">### Curva Precision-Recall</string>
+    <string name="pr_curve_description">**Descrição:** Relaciona a precisão (percentual de previsões corretas dentre as positivas) com o recall (sensibilidade) em diferentes limiares de decisão.</string>
+    <string name="pr_curve_eval">**Avaliação:** Idealmente, a curva deve ser alta, indicando que o modelo equilibra bem precisão e recall.</string>
+    <string name="lift_curve_title">### Curva Lift</string>
+    <string name="lift_curve_description">**Descrição:** Avalia a performance do modelo ao comparar a taxa de respostas observadas versus a taxa de respostas esperadas em uma população classificada pelo modelo.</string>
+    <string name="lift_curve_eval">**Avaliação:** A curva deve mostrar um aumento significativo nos primeiros percentis, indicando que o modelo é eficaz para segmentar corretamente os exemplos positivos.</string>
+    <string name="learning_curve_title">### Curva de Aprendizado</string>
+    <string name="learning_curve_description">**Descrição:** Mostra a performance do modelo em termos de erro conforme o número de amostras aumenta, dividida em erro de treinamento e erro de validação.</string>
+    <string name="learning_curve_eval">**Avaliação:** O modelo ideal apresenta uma redução no erro de validação à medida que mais dados são usados para treinamento, com a curva de erro de validação convergindo para a curva de erro de treinamento.</string>
+    <string name="feature_importance_title">### Importância das Features</string>
+    <string name="feature_importance_description">**Descrição:** Exibe a contribuição de cada feature no processo de tomada de decisão do modelo.</string>
+    <string name="feature_importance_eval">**Avaliação:** Features com maior importância têm mais impacto nas previsões do modelo. Avalie se as features mais importantes fazem sentido para o problema em questão.</string>
+    <string name="probability_histogram_title">### Histograma de Probabilidades</string>
+    <string name="probability_histogram_description">**Descrição:** Mostra a distribuição das probabilidades previstas para a classe positiva (1).</string>
+    <string name="probability_histogram_eval">**Avaliação:** Um modelo bem calibrado deve ter uma distribuição clara, com alta probabilidade para a classe positiva e baixa para a negativa.</string>
+    <string name="kappa_statistic_title">### Estatística de Kappa</string>
+    <string name="kappa_statistic_description">**Descrição:** Mede o grau de concordância entre as previsões do modelo e os valores reais, ajustando para concordâncias ao acaso.</string>
+    <string name="kappa_statistic_eval">**Avaliação:** O valor de Kappa varia de -1 a 1, onde 1 indica perfeita concordância, 0 indica concordância ao acaso, e valores negativos indicam desempenho abaixo do esperado.</string>
+
+    <!-- Prediction Page -->
+    <string name="prediction_page_title">Previsão de Asteroides Potencialmente Perigosos</string>
+    <string name="absolute_magnitude_h">**Magnitude Absoluta H**:</string>
+    <string name="absolute_magnitude_h_dialog">Refere-se ao brilho intrínseco do asteroide.</string>
+    <string name="absolute_magnitude_h_range">Magnitude Absoluta H (min 9.25, max 30.1)</string>
+    <string name="estimated_diameter_max_km">**Diâmetro Estimado Máximo (km)**:</string>
+    <string name="estimated_diameter_max_km_dialog">Estimativa do maior diâmetro do asteroide.</string>
+    <string name="estimated_diameter_max_km_range">Diâmetro Estimado Máximo (km) (min 0.0056, max 83.95)</string>
+    <string name="relative_velocity_kms">**Velocidade Relativa (km/s)**:</string>
+    <string name="relative_velocity_kms_dialog">Velocidade do asteroide em relação à Terra.</string>
+    <string name="relative_velocity_kms_range">Velocidade Relativa (km/s) (min 0.075, max 94.57)</string>
+    <string name="miss_distance_km">**Distância de Passagem (km)**:</string>
+    <string name="miss_distance_km_dialog">Distância mínima da Terra durante a aproximação do asteroide.</string>
+    <string name="miss_distance_km_range">Distância de Passagem (km) (min 12913.14, max 299134700)</string>
+    <string name="year_of_approach">**Ano de Aproximação**:</string>
+    <string name="year_of_approach_dialog">Ano da aproximação mais próxima em formato epoch.</string>
+    <string name="year_of_approach_range">Ano de Aproximação (min 1900, max 2100)</string>
+    <string name="orbit_class_type">**Tipo de Classe de Órbita**:</string>
+    <string name="orbit_class_type_dialog">Define a classe de órbita do asteroide. Valores: (0=Não classificado, 1=Amor, 2=Apollo, 3=Aten)</string>
+    <string name="orbit_class_type_range">Tipo de Classe de Órbita (0, 1, 2, 3)</string>
+    <string name="eccentricity">**Excentricidade**:</string>
+    <string name="eccentricity_dialog">Mede a forma da órbita (0 = circular, 1 = extremamente alongada).</string>
+    <string name="eccentricity_range">Excentricidade (min 0.013, max 0.968)</string>
+    <string name="perihelion_distance">**Distância Periélio (AU)**:</string>
+    <string name="perihelion_distance_dialog">Distância mínima do asteroide ao Sol em unidades astronômicas.</string>
+    <string name="perihelion_distance_range">Distância Periélio (AU) (min 0.0704, max 1.299)</string>
+    <string name="inclination">**Inclinação (graus)**:</string>
+    <string name="inclination_dialog">Inclinação da órbita do asteroide em relação ao plano da eclíptica.</string>
+    <string name="inclination_range">Inclinação (graus) (min 0.054, max 154.35)</string>
+    <string name="minimum_orbit_intersection">**Mínima Interseção de Órbita (AU)**:</string>
+    <string name="minimum_orbit_intersection_dialog">Distância mínima entre a órbita do asteroide e a da Terra.</string>
+    <string name="minimum_orbit_intersection_range">Mínima Interseção de Órbita (min 0.000025, max 0.708)</string>
+    <string name="orbital_period">**Período Orbital (dias)**:</string>
+    <string name="orbital_period_dialog">Tempo que o asteroide leva para completar uma órbita ao redor do Sol.</string>
+    <string name="orbital_period_range">Período Orbital (dias) (min 176.57, max 27441.14)</string>
+    <string name="jupiter_tisserand_invariant">**Invariante de Tisserand de Júpiter**:</string>
+    <string name="jupiter_tisserand_invariant_dialog">Parâmetro dinâmico que mede a influência gravitacional de Júpiter no asteroide.</string>
+    <string name="jupiter_tisserand_invariant_range">Invariante de Tisserand de Júpiter (min 1.316, max 9.039)</string>
+    <string name="predict_button">Prever</string>
+    <string name="prediction_result">Previsão: {}</string>
+    <string name="dangerous_asteroid">Asteroide Perigoso</string>
+    <string name="non_dangerous_asteroid">Asteroide Não Perigoso</string>
+    <string name="prediction_error">Erro ao processar a previsão: {}</string>
+
+    <!-- EDA Page -->
+    <string name="eda_page_title">Análise Exploratória de Asteroides</string>
+    <string name="eda_dangerous_asteroids_distribution_title">### Distribuição de Asteroides Potencialmente Perigosos</string>
+    <string name="eda_dangerous_asteroids_distribution_description">**Descrição:** Este gráfico mostra a proporção de asteroides que são considerados potencialmente perigosos versus os que não são.</string>
+    <string name="eda_dangerous_asteroids_distribution_eval">**Avaliação:** A análise ajuda a entender o equilíbrio das classes, o que é importante para avaliar se o modelo está lidando com classes desbalanceadas.</string>
+    <string name="eda_correlation_matrix_title">### Matriz de Correlação</string>
+    <string name="eda_correlation_matrix_description">**Descrição:** A matriz de correlação mostra a relação entre as variáveis numéricas do dataset. Cada célula contém o coeficiente de correlação entre dois atributos.</string>
+    <string name="eda_correlation_matrix_eval">**Avaliação:** Correlações altas (positivas ou negativas) podem indicar redundância de features, o que pode ser problemático para alguns modelos.</string>
+    <string name="eda_diameter_density_title">### Distribuição dos Diâmetros por Periculosidade</string>
+    <string name="eda_diameter_density_description">**Descrição:** Este gráfico exibe a distribuição do diâmetro dos asteroides em relação à sua periculosidade.</string>
+    <string name="eda_diameter_density_eval">**Avaliação:** A visualização ajuda a verificar se asteroides maiores têm maior probabilidade de serem considerados perigosos.</string>
+    <string name="eda_feature_importance_title">### Importância das Características</string>
+    <string name="eda_feature_importance_description">**Descrição:** Exibe a importância relativa das features para o modelo.</string>
+    <string name="eda_feature_importance_eval">**Avaliação:** Identifica quais características mais influenciam a classificação dos asteroides como potencialmente perigosos ou não.</string>
+    <string name="eda_scatter_miss_distance_velocity_title">### Dispersão entre Distância de Aproximação e Velocidade Relativa</string>
+    <string name="eda_scatter_miss_distance_velocity_description">**Descrição:** Gráfico de dispersão entre a distância de aproximação mínima e a velocidade relativa dos asteroides.</string>
+    <string name="eda_scatter_miss_distance_velocity_eval">**Avaliação:** Permite verificar se há uma relação entre a distância de aproximação e a velocidade, ajudando a identificar padrões de comportamento entre asteroides mais próximos.</string>
+    <string name="eda_temporal_distribution_title">### Distribuição Temporal das Aproximações</string>
+    <string name="eda_temporal_distribution_description">**Descrição:** Mostra a distribuição das datas em que os asteroides fazem aproximações à Terra.</string>
+    <string name="eda_temporal_distribution_eval">**Avaliação:** Ajuda a entender a periodicidade ou se há tendências temporais no comportamento dos asteroides.</string>
+    <string name="eda_numerical_distributions_title">### Distribuição das Variáveis Numéricas</string>
+    <string name="eda_numerical_distributions_description">**Descrição:** Exibe a distribuição das principais variáveis numéricas no dataset.</string>
+    <string name="eda_numerical_distributions_eval">**Avaliação:** Permite observar a distribuição dos dados e identificar outliers, assim como assimetrias.</string>
+    <string name="eda_vif_title">### Verificação de Multicolinearidade (VIF)</string>
+    <string name="eda_vif_description">**Descrição:** O Variance Inflation Factor (VIF) mede a multicolinearidade entre as features.</string>
+    <string name="eda_vif_eval">**Avaliação:** Um VIF elevado (acima de 10) pode indicar problemas de multicolinearidade, sugerindo que algumas variáveis podem ser redundantes e devem ser removidas.</string>
+
+    <!-- Cross Validation Page -->
+    <string name="cross_validation_page_title">Validação Cruzada (K-Fold)</string>
+    <string name="cross_validation_model">Realizando validação cruzada para o modelo: {}</string>
+    <string name="cross_validation_model_not_found">Modelo selecionado não encontrado.</string>
+    <string name="cross_validation_f1_score">Modelo {} - F1 Score (ponderado) da Validação Cruzada: {:.4f}</string>
+    <string name="cross_validation_prediction_results_title">Resultados de Previsão com Dados de Teste</string>
+    <string name="cross_validation_accuracy">{} - Accuracy: {}</string>
+    <string name="cross_validation_classification_report">{} - Classification Report:\n{}</string>
+
+    <!-- PCA Analysis Page -->
+    <string name="pca_analysis_page_title">Análise de Componentes Principais (PCA)</string>
+    <string name="pca_variance_title">### Variância PCA</string>
+    <string name="pca_variance_description">**Descrição:** O gráfico de variância explicada pelos componentes principais mostra a quantidade de informação capturada por cada componente.</string>
+    <string name="pca_variance_eval">**Avaliação:** A análise de PCA ajuda a identificar quais componentes principais contêm mais variância nos dados, facilitando a redução dimensional e visualização de características importantes no modelo. Os valores de variância explicada por componente variam de 0 a 1.</string>
+    <string name="pca_variance_explained">Variância explicada por cada componente: {}</string>
+</resources>

@@ -1,21 +1,23 @@
 import streamlit as st
+
+from .page import Page
 from src.app_components.controllers import ModelController
+from src.utils.string_utils import strings
 
 
-class PcaAnalysisPage:
+class PcaAnalysisPage(Page):
     def __init__(self, model_controller: ModelController):
         self.model_controller = model_controller
 
     def display(self):
+        super().display()
+
         _, pca, _, _, _, _ = self.model_controller.load_data()
 
-        st.write(f"### Variancia PCA")
+        st.write(strings["pca_variance_title"])
 
         # Exibir a variância explicada
         explained_variance = pca.explained_variance_ratio_
-        st.write(
-            "**Descrição:** O gráfico de variância explicada pelos componentes principais mostra a quantidade de informação capturada por cada componente.")
-        st.write(
-            "**Avaliação:** A análise de PCA ajuda a identificar quais componentes principais contêm mais variância nos dados, facilitando a redução dimensional e visualização de características importantes no modelo. Os valores de variância explicada por componente variam de 0 a 1")
-        st.text(f"Variância explicada por cada componente: {explained_variance}")
-        st.text(f"Variância total explicada: {sum(explained_variance)}")
+        st.write(strings["pca_variance_description"])
+        st.write(strings["pca_variance_eval"])
+        st.text(strings["pca_variance_explained"].format(explained_variance))
