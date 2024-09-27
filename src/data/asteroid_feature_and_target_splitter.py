@@ -1,5 +1,5 @@
 from sklearn.model_selection import train_test_split
-
+from imblearn.over_sampling import SMOTE
 
 class AsteroidFeatureAndTargetSplitter:
     def __init__(self, model_persistence_handler):
@@ -23,7 +23,17 @@ class AsteroidFeatureAndTargetSplitter:
         print(f"Training set size: {x_train.shape}")
         print(f"Testing set size: {x_test.shape}")
 
-        # 3. Save the sets using joblib
+        # 4. Instanciando o objeto SMOTE
+        smote = SMOTE(random_state=42)
+
+        # 5. Aplicando o SMOTE apenas no conjunto de treinamento
+        x_train, y_train = smote.fit_resample(x_train, y_train)
+
+        # Display the size of the sets
+        print(f"Training smote set size: {x_train.shape}")
+        print(f"Testing smote set size: {x_test.shape}")
+
+        # 6. Save the sets using joblib
         self.model_persistence_handler.save_model_joblib(x_train, 'x_train.joblib')
         self.model_persistence_handler.save_model_joblib(x_test, 'x_test.joblib')
         self.model_persistence_handler.save_model_joblib(y_train, 'y_train.joblib')

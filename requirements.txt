@@ -9,3 +9,4 @@ streamlit==1.38.0
 python-dotenv==1.0.1
 joblib~=1.4.2
 numpy~=2.1.1
+imbalanced-learn~=0.12.3

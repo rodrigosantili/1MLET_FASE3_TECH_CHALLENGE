@@ -35,7 +35,8 @@ To run this project locally, follow these steps:
 
 ## Usage
 
-1. Run the file **src/main.py** to generate the models
+1. Run the file ```python .\src\main.py``` to generate the models
+
 
 2. Now run the command below in the terminal to launch the application
 ```

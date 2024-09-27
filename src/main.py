@@ -23,7 +23,7 @@ def main():
     # Check if the file fetched_asteroids.json already exists
     if not os.path.exists(NasaApiClient.DEFAULT_ASTEROIDS_DATA_FILEPATH):
         print("Asteroids data not found. Collecting data from NASA API...")
-        nasa_client.fetch_asteroids_data(max_objects=500)
+        nasa_client.fetch_asteroids_data(max_objects=3000)
     else:
         print("Asteroids data found. Skipping data collection from NASA API...")
 
