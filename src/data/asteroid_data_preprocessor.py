@@ -19,7 +19,7 @@ class AsteroidDataPreprocessor:
                  the fitted StandardScaler, and the fitted PCA
         """
         # 1. Remove the columns 'estimated_diameter_min_km' and 'semi_major_axis'
-        df = df.drop(['estimated_diameter_min_km', 'estimated_diameter_max_km', 'semi_major_axis'], axis=1)
+        df = df.drop(['estimated_diameter_min_km', 'semi_major_axis'], axis=1)
 
         # 2. Select numerical columns
         numerical_columns = df.select_dtypes(include=['float64', 'int64']).columns.tolist()

@@ -62,6 +62,7 @@ This project uses the following Python libraries:
 - `python-dotenv==1.0.1`
 - `joblib~=1.4.2`
 - `numpy~=2.1.1`
+- `imbalanced-learn~=0.12.3`
 
 You can install all dependencies by running the command:
 ```bash
