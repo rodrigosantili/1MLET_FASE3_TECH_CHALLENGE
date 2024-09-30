@@ -13,6 +13,10 @@ This project integrates with the NASA API to collect and analyze space-related d
 
 This project fetches data from NASA's API using an API key and processes it for analysis. The data is then pre-processed and fed into various machine learning models such as Random Forest, SVM, and Neural Networks. The models are evaluated for their performance, and visualizations are generated using `matplotlib` and `seaborn`.
 
+Below is the video with more details about data exploration, models used and application.
+
+***https://youtu.be/_xfZkMQuANY***
+
 ## Installation
 
 To run this project locally, follow these steps:
